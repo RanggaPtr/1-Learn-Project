@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on off lampu 2 tombol</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="pure-g">  
+        <!-- lampu 1 -->
+        <div class="pure-u-1 pure-u-md-1-3">
+            <img src="off.png" alt="the lamp is off" id="lampu1">
+            <button onclick="saklar('on')"class="pure-button pure-button-primary">turn on the lamp</button>
+            <button onclick="saklar('off')"class="button-error pure-button">turn off the lamp</button>
+        </div>
+        <!-- lampu 2 -->
+        <div class="pure-u-1 pure-u-md-1-3">
+            <img src="off.png" alt="the lamp is off" id="lampu2">
+            <button onclick="saklar('on')"class="pure-button pure-button-primary">turn on the lamp</button>
+            <button onclick="saklar('off')"class="button-error pure-button">turn off the lamp</button>
+        </div >
+        
+        <!-- lampu 3 -->
+        <div class="pure-u-1 pure-u-md-1-3">
+            <img src="off.png" alt="the lamp is off" id="lampu3">
+            <button onclick="saklar('on')"class="pure-button pure-button-primary">turn on the lamp</button>
+            <button onclick="saklar('off')"class="button-error pure-button">turn off the lamp</button>
+        </div>
+    </div>
+    <script src="saklar.js" type="application/javascript" />
+    </script>
+</body>
+
+</html>
