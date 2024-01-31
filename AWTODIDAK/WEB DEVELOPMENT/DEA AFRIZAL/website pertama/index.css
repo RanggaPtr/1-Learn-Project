@@ -37,7 +37,7 @@ margin: 5px;
 }
 
 .container-content{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,4 +80,10 @@ font-size: 40px;
     font-style: normal;
     display: flex;
     justify-content: center;
+}
+
+#biodata{
+    background-color: antiquewhite;
+    width: 550px;
+    height: 100%;
 }
