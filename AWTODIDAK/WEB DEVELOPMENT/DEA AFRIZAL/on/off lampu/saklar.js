@@ -1,15 +1,33 @@
-function saklar(params) {
-    console.log(params);
-    console.log("Your lamp is " + params)
+function saklar(action, lamp) {
+    let toggle = document.getElementById('default-toggle')
+    console.log("testing is " + toggle.value);
+    console.log(action);
+    console.log("Your lamp " + lamp + " is " + action)
     let lampu1 = document.getElementById('lampu1')
+    let lampu2 = document.getElementById('lampu2')
+    let lampu3 = document.getElementById('lampu3')
 
-    if (params == "on") {
+    if (action == "on") {
         // nyala
-        lampu1.src = 'on.png'
+        if (lamp == 1) {
+            lampu1.src = 'on.png'
+        } else if (lamp == 2) {
+            lampu2.src = 'on.png'
+        } else {
+            lampu3.src = 'on.png'
+        }
+
     }
-    if (params == "off") {
+    if (action == "off") {
         // mati
-        lampu1.src = 'off.png'
+        if (lamp == 1) {
+            lampu1.src = 'off.png'
+        } else if (lamp == 2) {
+            lampu2.src = 'off.png'
+        } else {
+            lampu3.src = 'off.png'
+        }
     }
+
     return lampu1;
 }
