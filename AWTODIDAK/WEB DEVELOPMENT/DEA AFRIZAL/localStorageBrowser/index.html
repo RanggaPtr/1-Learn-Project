@@ -6,30 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- <style>
-    #root{
+<style>
+    #root {
         background-color: tomato;
         color: aqua;
         font-size: 2em;
         text-align: center;
         height: 100vh;
     }
-</style> -->
+</style>
+
 <body>
     <!-- ini adalah content -->
-    <div id="root"></div>
+    <div id="root">
+        <input type="text" placeholder="username" id="usernameInput">
+        <input type="password" placeholder="password" id="passwordInput">
+        <button onclick="onLogin()" id="loginButton">LOGIN</button>
+        <br>
+        <h1 id="succes">SELAMAT DATANG KEMBALI SIR</h1>
+        <h1 id="fail">USERNAME ATAU PASSWORD ANDA SALAH SILAHKAN PERIKSA KEMBALI</h1>
+
+    </div>
 
     <script type="application/javascript">
-        const myName="rangga putra "
-        const myAge="18 "
+        let usernameInput = document.getElementById("usernameInput")
+        let passwordInput = document.getElementById("passwordInput")
+        let succes = document.getElementById("succes")
+        let fail = document.getElementById("fail")
+        let loginButton=document.getElementsById('loginButton')
+        
+        succes.style.display = "none"
+        fail.style.display = "none"
+        
+        function onLogin() {
+            console.log('login button clicked')
+            console.log(usernameInput.value)
+            console.log(passwordInput.value)
+            
+            localStorage.setItem("username",usernameInput.value)
+            fail.style.display = "none"
+            succes.style.display = "none"
+            
+            if (usernameInput.value == 'rangga' && passwordInput.value == 'ranggaganteng99') {
+                alert('selamat datang kembali ' + usernameInput.value)
+                localStorage.setItem("condition","succes")
+                fail.style.display = "none"
+                succes.style.display = "block"
+            } else {
+                alert('password atau username anda salah')
+                localStorage.setItem("condition","fail")
+                succes.style.display = "none"
+                fail.style.display = "block"
 
-        let root = document.getElementById('root')
-        root.textContent=myName + myAge
-        root.style.backgroundColor="tomato"
-        root.style.Color="white"
-        root.style.fontSize="2em"
-        root.style.textAlign="center"
-        root.style.height="100vh"
+            }
+        }
+
+        // if (localStorage.getItem('username')) {
+        //     usernameInput.style.display="none"
+        //     passwordInput.style.display="none"
+        //     loginButton.style.display="none"
+        //     if(localStorage.getItem('condition'=="succes")){
+
+        //     }
+        // }
     </script>
 </body>
 
