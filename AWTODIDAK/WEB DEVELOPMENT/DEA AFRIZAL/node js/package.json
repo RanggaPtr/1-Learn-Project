@@ -1,0 +1,19 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "sesi 7 dea cuy university node js backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "rangga",
+    "ganteng"
+  ],
+  "author": "rangga putra",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.3",
+    "rupiah-format": "^1.0.0"
+  }
+}

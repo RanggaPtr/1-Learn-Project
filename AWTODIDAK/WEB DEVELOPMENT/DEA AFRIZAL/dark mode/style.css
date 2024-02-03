@@ -57,6 +57,11 @@ nav a:hover{
     animation: jedagJedug  .5s infinite;
 }
 
+h1:hover{
+    background-color: darkblue;
+    color: white;
+}
+
 @keyframes jedagJedug{
     0%{
         font-size: 16px;
