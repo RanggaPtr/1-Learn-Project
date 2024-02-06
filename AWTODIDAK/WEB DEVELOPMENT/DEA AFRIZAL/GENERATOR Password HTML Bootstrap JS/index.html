@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD GENERATOR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<style>
+    h1:hover {
+        background-color: blue;
+        color: aliceblue;
+
+    }
+
+    label:hover {
+        background-color: blue;
+        color: aliceblue;
+    }
+
+    #buttonGenerate:hover {
+        background-color: yellow;
+        color: black;
+    }
+
+    #buttonSave:hover {
+        background-color: orangered;
+        initial-value: "jangan sentuh";
+    }
+
+    #passwordLength:hover {
+        background-color: rgb(0, 239, 40);
+    }
+
+    #password:hover {
+        background-color: red;
+
+    }
+
+    .dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+        /* transition: ease-in .5s; */
+    }
+
+    .dark-mode {
+        transition-delay: 1;
+        transition: ease-in .50s;
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+
+    h6:hover {
+        background-color: yellow;
+        color: black;
+    }
+</style>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="d-flex flex-column">
+            <h1 class="text-center"> PASSWORD GENERATOR </h1>
+
+            <div class=" d flex flex-column mt-3">
+                <label for="password" class="text-uppercase fw-bold "> password length</label>
+                <input class="form-control form-control-lg mt-2" id="passwordLength" type="number" />
+                <label for="password" class="text-uppercase fw-bold mt-3"> password</label>
+                <input class="form-control form-control-lg mt-2" id="password" type="" disabled />
+                <button onclick="getPassword()" class="btn btn-dark mt-4 text-uppercase fw-bold btn-lg w-100"
+                    id="buttonGenerate">Generate Password
+                </button>
+                <a onclick="savePassword()" class="btn btn-primary mt-3 text-uppercase fw-bold btn-lg w-100"
+                    id="buttonSave">Save Password
+                </a>
+                <h6 class="text-center mt-2" onclick="">Contact US</h6>
+                <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+            </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+adsdfasdfasdfadfafdsdfadfaafafafafaffa
+
+</html>

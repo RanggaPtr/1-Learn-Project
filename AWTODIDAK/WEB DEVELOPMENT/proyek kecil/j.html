@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Pet shop</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.dark-mode {
+            background-color: #111;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form h2 {
+            color: #ffc107;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #444;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #888;
+        }
+
+        .contact-form button {
+            background-color: #ffc107;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #e0a800;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            .contact-form,
+            .gallery img {
+                max-width: 100%;
+            }
+
+            .gallery img {
+                margin: 10px 0;
+            }
+
+            .dark-mode-toggle {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            header,
+            footer {
+                font-size: 16px;
+            }
+
+            .gallery img {
+                max-width: calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+
+    <header>
+        <h1> Modern Pet Shop</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <p>Welcome to modern Pet Shop website!</p>
+        <button onclick="showMessage()">Click me</button>
+        <p id="demo"></p>
+
+        <h2>Image Gallery</h2>
+        <div class="gallery">
+            <img src="https://example.com/house1.jpg" alt="House 1">
+            <img src="https://example.com/house2.jpg" alt="House 2">
+            <img src="https://example.com/house3.jpg" alt="House 3">
+            <img src="https://example.com/house4.jpg" alt="House 4">
+            <img src="images/house1.jpg" alt="House 1">
+            <!-- Add more images or replace with your own -->
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form onsubmit="sendWhatsAppMessage(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 TATA KREASINDO
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById("demo").innerHTML = "Hello, you clicked the button!";
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+
+            const phoneNumber = "+62 895-6304-84414";
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const whatsappMessage = `Hi! My name is ${name}. My email is ${email}. I have a message for you: ${message}`;
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+
+</html>
