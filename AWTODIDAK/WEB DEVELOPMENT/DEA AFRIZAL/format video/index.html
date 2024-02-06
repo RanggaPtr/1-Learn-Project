@@ -1,0 +1,100 @@
+<style>
+    *,
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    video {
+        display: block;
+        width: 100%;
+        /* border: 5px solid cyan; */
+    }
+
+    .video-component {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 12px;
+
+    }
+
+    .btn {
+        border: none;
+        padding: 10px;
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .btn-play {
+        background-color: green;
+        color: white;
+    }
+
+    .btn-pause {
+        background-color: red;
+        color: white;
+    }
+
+    .btn-pip {
+        background-color: yellow;
+        color: black;
+    }
+
+    .container {
+        max-width: 50%;
+        margin: 0 auto;
+
+        position: relative;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video button</title>
+</head>
+
+<body>
+    <div class="container">
+        <video width="720">
+            <source src="morning _ cinematic video.mp4" type="video/mp4" />
+        </video>
+        <div class="video-component">
+            <button onclick="play()" class="btn btn-play">PLAY</button>
+            <button onclick="pause()" class="btn btn-pause">PAUSE</button>
+            <button onclick="PIP()" class=" btn btn-pip">PIP</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    const videoComponent = document.querySelector('video')
+    function play() {
+        console.log('PLAY')
+        videoComponent.play()
+        videoComponent.requestFullscreen()
+    }
+    function pause() {
+        console.log('PAUSE')
+        videoComponent.pause()
+    }
+    function PIP() {
+        console.log('PIP')
+        videoComponent.requestPictureInPicture()
+    }
+</script>
