@@ -1,0 +1,117 @@
+*   {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    background-color: #222222;
+    color: white;
+}
+
+.content{
+    border: 3px solid whitesmoke;
+    padding: 12px;
+    cursor: pointer;
+    /* transform: scale(1.2); */
+}
+
+.content:hover{
+    background-color: blueviolet;
+    color: black;
+    transition: .3s ease-in-out;
+    border-color: black;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.barTop{
+    width: 100%;
+    height: 5px;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* memanggil keyframes */
+    animation: progressHorizontal,progressColor;
+    /* trigger run animation */
+    animation-timeline:scroll() ;
+    /* arah scale */
+    transform-origin:0% ;
+}
+.barBottom{
+    width: 100%;
+    height: 5px;
+    background-color: aqua;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* memanggil keyframes */
+    animation: progressHorizontal,progressColor;
+    /* trigger run animation */
+    animation-timeline:scroll() ;
+    /* arah scale */
+    transform-origin:100% ;
+}
+
+.barRight{
+    height: 100%;
+    width: 5px;
+    background-color: aqua;
+    right: 0;
+    top: 0;
+    position: fixed;
+    /* memanggil keyframes */
+    animation: progressVertical,progressColor;
+    /* trigger run animation */
+    animation-timeline:scroll() ;
+    /* arah scale */
+    transform-origin:0 0% ;
+}
+.barLeft{
+    height: 100%;
+    width: 5px;
+    background-color: aqua;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    /* memanggil keyframes */
+    animation: progressVertical,progressColor;
+    /* trigger run animation */
+    animation-timeline:scroll() ;
+    /* arah scale */
+    transform-origin:0 100% ;
+}
+
+@keyframes progressHorizontal{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+@keyframes progressVertical{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+@keyframes progressColor {
+    0%{
+        background-color: rgb(105, 41, 233);
+    }
+    50%{
+        background-color: rgb(216, 31, 216);
+    }
+    100%{
+        background-color: aqua;
+    }
+}
