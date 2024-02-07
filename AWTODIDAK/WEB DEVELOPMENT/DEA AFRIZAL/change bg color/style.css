@@ -6,7 +6,13 @@
 body{
     transition:  .5s ease-in-out;
 }
-
+img{
+    position: fixed;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        height: 50px;
+}
  .dark-mode-toggle {
         position: fixed;
         top: 20px;
@@ -14,7 +20,7 @@ body{
         cursor: pointer;
         font-size: 24px;
         color: #fff;
-        /* transition: ease-in .5s; */
+        height: 50px;
     }
 
     .dark-mode {
