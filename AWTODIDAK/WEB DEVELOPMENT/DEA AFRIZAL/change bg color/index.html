@@ -10,6 +10,8 @@
 
 <body>
     <div class="container">
+        <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+
         <div class="title">CHOOSE COLOR</div>
 
         <div class="box">
@@ -19,6 +21,11 @@
         </div>
             <a class="mt-3"  onclick="reset">RESET</a>
         <script>
+            function toggleDarkMode() {
+                    document.body.classList.toggle("dark-mode");
+                    body.classList.toggle("dark")
+                }
+                
             const circles = document.querySelectorAll('.circle')
             console.log(circles)
             circles.forEach(circle => {
