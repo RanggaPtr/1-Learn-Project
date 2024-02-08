@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Usia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 500px;
+            border: 1px solid black;
+            padding: 16px;
+        }
+
+        #yearOfBirth {
+            padding: 16px;
+            background-color: tomato;
+            color: wheat;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Cek Usia Anda</h3>
+        <input type="number" placeholder="Masukkan Tahun Kelahiran" id="yearOfBirth">
+        <button onclick="hitungUsia()">Hitung Usia</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function hitungUsia() {
+            const tahunLahirInput = document.getElementById('yearOfBirth').value;
+            const tahunLahir = parseInt(tahunLahirInput);
+            const tahunSekarang = new Date().getFullYear();
+            const umur = tahunSekarang - tahunLahir;
+
+            let hasil = document.getElementById('result');
+            if (isNaN(umur) || tahunLahirInput === '') {
+                hasil.innerHTML = 'Mohon masukkan tahun kelahiran dengan benar.';
+            } else {
+                hasil.innerHTML = `Anda berusia ${umur} tahun.`;
+            }
+        }
+    </script>
+</body>
+
+</html> 
