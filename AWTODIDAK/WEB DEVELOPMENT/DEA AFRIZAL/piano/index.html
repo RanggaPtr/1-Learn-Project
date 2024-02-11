@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Sederhana</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            border: 10px solid;
+        }
+
+        #piano {
+            display: flex;
+        }
+
+        .white-key {
+            width: 60px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .black-key {
+            width: 40px;
+            height: 130px;
+            background-color: black;
+            border: 1px solid black;
+            position: relative;
+            left: -20px;
+            z-index: 1;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="piano">
+        <div class="white-key" data-note="C"></div>
+        <div class="black-key" data-note="C#"></div>
+        <div class="white-key" data-note="D"></div>
+        <div class="black-key" data-note="D#"></div>
+        <div class="white-key" data-note="E"></div>
+        <div class="white-key" data-note="F"></div>
+        <div class="black-key" data-note="F#"></div>
+        <div class="white-key" data-note="G"></div>
+        <div class="black-key" data-note="G#"></div>
+        <div class="white-key" data-note="A"></div>
+        <div class="black-key" data-note="A#"></div>
+        <div class="white-key" data-note="B"></div>
+    </div>
+
+    <audio data-key="C" src="a.wav"></audio>
+    <audio data-key="C#"
+        src="data:audio/mp3;base64,//uQxAIAAAAAAAAAAAEluZm8AAAAHAAAABAAAASAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV"></audio>
+    <audio data-key="D"
+        src="data:audio/mp3;base64,//uQxAgAAAAAAAAAAEluZm8AAAAHAAAABAAAASAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV"></audio>
+    <audio data-key="D#"
+        src="data:audio/mp3;base64,//uQxAwAAAAAAAAAAEluZm8AAAAHAAAABAAAASAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
