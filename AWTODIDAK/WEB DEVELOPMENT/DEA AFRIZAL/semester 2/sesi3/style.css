@@ -1,0 +1,142 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --bg-primary: #1A2238;
+    --bg-secondary: #111;
+    --txt-primary: #fff;
+    --txt-secondary: #aaa;
+}
+/* ===============================================header============================================== */
+header{
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--txt-primary);
+}
+
+li{
+    list-style: none;
+    padding: 20px;
+    font-style: bold;
+}
+li:hover{
+    background-color: var(--txt-secondary);
+    border-radius:20px ;
+    transition:all 0.5s ease  0s;
+}
+li a:hover{
+    color: var(--bg-secondary);
+    transition:all 0.5s ease  0s;
+}
+
+/* li a {
+    display: block;
+    padding: 10px; 
+    transition: all 0.5s ease 0s;
+} */
+
+/* li a:hover {
+    background-color: var(--txt-secondary);
+    border-radius: 40px;
+    color: var(--bg-secondary);
+    border:none;
+} */
+
+a{
+    color: var(--txt-primary);
+    /* menghilangkan garis bawah akibat a */
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    padding : 10px;
+}
+
+.logo{
+margin-right: auto;
+margin-left: 15px;
+cursor: pointer;
+}
+
+.logo:hover{
+    transition:all 0.5s ease  0s;
+    background-color: var(--txt-secondary);
+    color: var(--bg-secondary);
+    border-radius:8px ;
+}
+
+.button1{
+    margin-right: 15px;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: var(--bg-secondary);
+    color: var(--txt-primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button1:hover{
+    background-color: var(--txt-secondary);
+    color: var(--bg-secondary);
+    transition:all 0.5s ease  0s;
+}
+
+/* ===============================================content============================================== */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    /* kasih jarak atas bawah */
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* agar nengah */
+    display: flex;
+    flex-direction: column;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.foto1{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    /* border-radius: 90%; */
+}
+
+.parallax{
+    background-image: url("foto/rumah.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+

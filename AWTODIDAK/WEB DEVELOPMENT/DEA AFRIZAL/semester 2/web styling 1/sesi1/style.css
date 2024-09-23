@@ -1,0 +1,94 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kode Mono", monospace;
+}
+
+:root {
+    --bg-primary: linear-gradient(135deg, #423c3c, #1f1b1b);
+    --bg-secondary: #111;
+    --txt-primary: #ffdd00;
+    --txt-secondary: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    /* dibawah ini buat rapi */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    /* width: 100%; */
+    /* height: auto; */
+}
+
+.card {
+    width: 40%;
+    background-color: var(--bg-secondary);
+    color: var(--txt-primary);
+    border: 1px solid var(--txt-primary);
+    padding: 32px;
+    margin: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.icons {
+    margin-top: 8px;
+    font-size: 40px;
+}
+
+.description {
+    margin-top: 8px;
+    font-size: 0.6em;
+}
+
+.btn {
+    background-color: var(--bg-secondary);
+    color: var(--txt-primary);
+    margin-top: 18px;
+    padding: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #423c3c;
+    color: var(--txt-secondary);
+    transform: rotate(2deg);
+    transition: 0.3s ease-in-out;
+}
+
+/* media query */
+/* seperti function */
+
+/* @media screen and (min-width:500px) {
+    .container {
+        background: var(--bg-secondary);
+    }
+} */
+
+@media screen and (max-width: 476px) {
+.card{
+    width: 95%;
+}
+}  
