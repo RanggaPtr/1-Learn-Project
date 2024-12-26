@@ -1,0 +1,30 @@
+.fancy {
+    font-weight: bold;
+    text-shadow: 4px 4px 3px #77f;
+  }
+  
+  p.fancy {
+    text-shadow: 4px 4px 3px #00c8eb;
+  }
+
+  /* Menargetkan seluruh tipe elemen */
+* {
+    color: green;
+  }
+  
+  /* Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
+  *[lang^='en'] {
+    font-style: italic;
+  }
+  
+  /* Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada atribut class */
+  *.warning {
+    color: red;
+  }
+  
+  /* Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+  *#content {
+    border: 1px solid blue;
+    padding: 20px;
+  }
+  

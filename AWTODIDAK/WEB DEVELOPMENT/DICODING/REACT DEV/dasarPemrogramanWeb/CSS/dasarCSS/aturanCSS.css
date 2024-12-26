@@ -1,0 +1,9 @@
+p {
+     /*p adalah selectornya sedangkan bawah ini adalah declarasi atau nilai atau style yang ingin ditambahkan ke pada html sesuai selector yang dipilih  */
+    font-size:50% ;
+    color: red;
+    font-family: sans-serif;
+    /* rubah menjadi h1 */
+    font-weight: bold;
+    /* deklarasikan nilai properti lainnya pada baris baru */
+  }

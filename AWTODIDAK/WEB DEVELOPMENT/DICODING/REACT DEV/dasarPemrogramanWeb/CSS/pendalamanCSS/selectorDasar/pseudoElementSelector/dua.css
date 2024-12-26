@@ -1,0 +1,9 @@
+/* Rule styling akan diterapkan pada karakter pertama di sebuah paragraf */
+p::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: saddlebrown;
+  }
+
+
+  

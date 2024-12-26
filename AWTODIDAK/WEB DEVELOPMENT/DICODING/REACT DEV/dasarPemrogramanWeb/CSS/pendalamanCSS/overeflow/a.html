@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Example</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .visible {
+            overflow: visible;
+        }
+        .hidden {
+            overflow: hidden;
+        }
+        .scroll {
+            overflow: scroll;
+        }
+        .auto {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Overflow Example</h1>
+    <div class="container">
+        <div class="box visible">
+            <p>div { overflow: visible }</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ab accusantium amet corporis cupiditate dignissimos error expedita explicabo facere facilis.
+        </div>
+
+        <div class="box hidden">
+            <p>div { overflow: hidden }</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ab accusantium amet corporis cupiditate dignissimos error expedita explicabo facere facilis.
+            <p>asdfadsfasdasdfasdf</p>
+        </div>
+
+        <div class="box scroll">
+            <p>div { overflow: scroll }</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ab accusantium amet corporis cupiditate dignissimos error expedita explicabo facere facilis.
+        </div>
+
+        <div class="box auto">
+            <p>div { overflow: auto }</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ab accusantium amet corporis cupiditate dignissimos error expedita explicabo facere facilis.
+        </div>
+    </div>
+
+</body>
+</html>
